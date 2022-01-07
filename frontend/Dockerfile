@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16.6.2
 
 # Create app directory
 WORKDIR /app
@@ -14,9 +14,11 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # Bundle app source
 
-COPY ./frontend/package*.json ./
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install --silent
 
+COPY . ./
 EXPOSE 3000
 
 CMD ["npm", "start"]

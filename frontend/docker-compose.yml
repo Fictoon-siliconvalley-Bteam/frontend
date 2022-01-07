@@ -1,18 +1,18 @@
-version: "3"
+version: "3.7"
+
 services:
-  react_app:
+  react:
+    container_name: react-dockerize
     build:
-      -context: .
-      -dockerfile: ./frontend/Dockerfile
-    expose:
-      -3000
-    port:
-      -3000:3000
+      context: .
+      dockerfile: Dockerfile
+      
     volumes:
-      -/app/node_modules
-      -./frontend:/app
-    stdin_open: true
-    tty: true
-    networks:
-      - app-tier
-    restart: always
+      - "/app"
+      - "/app/node_modules"
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+
+      
