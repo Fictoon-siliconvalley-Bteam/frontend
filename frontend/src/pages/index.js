@@ -1,12 +1,26 @@
-import React from 'react';
-import Hero from '../components/Hero';
+import React, {useState} from 'react'
+import Footer from '../components/Footer'
+import HeroSection from '../components/HeroSection'
+import InfoSection from '../components/InfoSection'
+import { homeObjOne,homeObjTwo,homeObjThree } from '../components/InfoSection/Data'
+import Navbar from '../components/Navbar'
 
 const Home = () => {
-  return (
-    <>
-      <Hero />
-    </>
-  );
-};
+    const [isOpen,setIsOpen] = useState(false)
 
-export default Home;
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
+    return (
+        <>
+            <Navbar toggle={toggle} />
+            <HeroSection />
+            <InfoSection {...homeObjOne}/> 
+            <InfoSection {...homeObjTwo}/> 
+            <InfoSection {...homeObjThree}/> 
+            <Footer/>
+        </>
+    )
+}
+
+export default Home
