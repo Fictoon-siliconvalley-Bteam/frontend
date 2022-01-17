@@ -24,10 +24,9 @@ const HeroSection = () => {
                 </HeroP>
                 <HeroBtnWrapper>
                     
-                   <Button type="button" onClick='www.google.com' onMouseEnter={onHover} onMouseLeav={onHover} primary="true" dark="true" >
-                        START {hover ? <ArrowForward/> : <ArrowRight /> }
-                    </Button>
-
+                    <a href={""}>
+                        START 
+                    </a>
                 </HeroBtnWrapper>
                 
             </HeroContent>
