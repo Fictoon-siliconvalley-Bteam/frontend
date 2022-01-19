@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { InfoContainer,InfoWrapper,InfoRow,Column1,Column2,TextWrapper,TopLine,Heading,Subtitle,ImgWrap,Img,IntroBlock} from './InfoElements'
+import { InfoContainer,InfoWrapper,InfoRow,Column1,Column2,TextWrapper,TopLine,Heading,Subtitle,ImgWrap,Img,IntroBlock,buttonlink} from './InfoElements'
 
 const InfoSection = ({lightBg,id,imgStart,topLine,lightText,headLine,darkText,description,alt}) => {
     return (
         <>
+     
           <InfoContainer lightBg={lightBg} id={id}>
           <InfoWrapper>
             <InfoRow imgStart={imgStart}>
@@ -24,11 +25,10 @@ const InfoSection = ({lightBg,id,imgStart,topLine,lightText,headLine,darkText,de
                             </label>
                             <input type="file" id="input-file" style={{display:"none"}}/>
                             <br/><br/> <br/>
-                 
-                            <button><Link to='../Result/Resultindex'>Home</Link></button>
-
-
-   
+                        
+                           
+                            <Link to='/result'>Start</Link>
+                           
                          </IntroBlock>
                     </TextWrapper>
                     

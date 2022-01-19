@@ -24,22 +24,4 @@ const Home = () => {
         </>
     )
 }
-
-const Result = () => {
-    const [isOpen,setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
-    return (
-        <>
-            <Navbar toggle={toggle} />
-            <HeroSection />
-            
-          
-            <Footer/>
-            
-        </>
-    )
-}
 export default Home
