@@ -3,7 +3,7 @@ import {Img,Column2,ImgWrap,ResultContainer} from '../Result/ResultElements'
 import Spinner from '../Spinner/Spinnerindex'
 const Result = (alt) => {
     //{loading ? <Spinner /> : }
-    const [loading,setLoading] = useState(true);
+    //const [loading,setLoading] = useState(true);
     return (
         <ResultContainer>
          <Column2>
