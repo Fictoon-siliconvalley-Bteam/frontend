@@ -5,7 +5,7 @@ export const ResultContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')}; 
 
     @media screen and (max-width: 1800px){
-        padding: 100px 0;
+        padding: 180px 0;
     }
 `
 
